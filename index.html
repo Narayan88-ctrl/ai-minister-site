@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Minister – Nepal | Narayan Ranabhat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Minister – Nepal: a transparent, data-driven governance prototype by Narayan Ranabhat. Dashboard, PDF reports, and grant-ready materials." />
+  <meta property="og:title" content="AI Minister – Nepal" />
+  <meta property="og:description" content="A transparent, data-driven governance platform for Nepal." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/cover.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🏛️%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b1020; --card:#10172a; --ink:#e7ecf5; --sub:#a6b1c2; --brand:#e11d48; --muted:#1e293b; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0b1020 60%,#0d1328);color:var(--ink)}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .card{background:var(--card);border:1px solid #1f2a44;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{font-size:40px;line-height:1.1;margin:0 0 10px}
+    h2{font-size:20px;margin:0 0 12px;color:#c7d2fe}
+    p{margin:0 0 12px;color:var(--sub)}
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{display:inline-flex;gap:8px;align-items:center;background:#111827;border:1px solid #29324d;color:#e5e7eb;border-radius:12px;padding:10px 14px;text-decoration:none}
+    .btn:hover{border-color:#3b4668}
+    .btn.primary{background:var(--brand);border-color:transparent}
+    .pill{font-size:12px;color:#fca5a5;background:#3f1b25;border:1px solid #5b2331;border-radius:999px;padding:6px 10px;display:inline-block;margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .footer{color:#93a0b8;font-size:13px;margin-top:24px}
+    .muted{color:#8aa0c5}
+    .code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:var(--muted);color:#cde1ff;border-radius:10px;padding:10px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="card">
+        <span class="pill">AI for Transparent Governance</span>
+        <h1>🏛️ AI Minister – Nepal</h1>
+        <p><b>Founder & Developer:</b> Narayan Ranabhat</p>
+        <p>A prototype that turns public budgets & projects into live dashboards, auto PDF transparency reports, and anomaly flags. Built in Nepal for Nepal.</p>
+        <div class="btns">
+          <a class="btn primary" href="http://localhost:8506" target="_blank">Open Live Dashboard</a>
+          <a class="btn" href="docs/AI_Minister_Grant_Proposal_Narayan_Ranabhat.pdf" target="_blank">English Proposal (PDF)</a>
+          <a class="btn" href="docs/AI_Minister_Grant_Proposal_Nepali_English_Narayan_Ranabhat.pdf" target="_blank">Bilingual Proposal (PDF)</a>
+          <a class="btn" href="docs/AI_Minister_Grant_Proposal_Nepali.pdf" target="_blank">नेपाली प्रस्ताव (PDF)</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>What’s inside</h2>
+        <p>• Interactive dashboard (Region / Sector / Year)</p>
+        <p>• Instant PDF transparency report</p>
+        <p>• CSV exports for budgets & projects</p>
+        <p>• “Ask AI” (optional) with secure API key</p>
+        <p class="muted">Roadmap: more datasets, Nepali LLM, public API.</p>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Demo steps</h2>
+        <p class="code">streamlit run app.py</p>
+        <p>Open <b>http://localhost:8506</b>. Change Region/Sector. Download the report.</p>
+      </div>
+      <div class="card">
+        <h2>Deploy safely</h2>
+        <p>Use GitHub Pages for this site and Streamlit Cloud for the app. Keep your <b>OPENAI_API_KEY</b> in Streamlit <i>Secrets</i>—never in code.</p>
+      </div>
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Phone: +977-98XXXXXXXX</p>
+        <p>GitHub: <a href="https://github.com/youruser" target="_blank">github.com/youruser</a></p>
+      </div>
+    </div>
+
+    <p class="footer">© <span id="year"></span> Narayan Ranabhat • AI Minister – Nepal</p>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
+
