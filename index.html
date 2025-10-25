@@ -1,86 +1,125 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ne">
 <head>
-  <meta charset="utf-8" />
-  <title>AI Minister – Nepal | Narayan Ranabhat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI Minister – Nepal: a transparent, data-driven governance prototype by Narayan Ranabhat. Dashboard, PDF reports, and grant-ready materials." />
-  <meta property="og:title" content="AI Minister – Nepal" />
-  <meta property="og:description" content="A transparent, data-driven governance platform for Nepal." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/cover.png" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🏛️%3C/text%3E%3C/svg%3E">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Minister – Nepal | Transparent Governance by AI</title>
   <style>
-    :root { --bg:#0b1020; --card:#10172a; --ink:#e7ecf5; --sub:#a6b1c2; --brand:#e11d48; --muted:#1e293b; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0b1020 60%,#0d1328);color:var(--ink)}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-    .card{background:var(--card);border:1px solid #1f2a44;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    h1{font-size:40px;line-height:1.1;margin:0 0 10px}
-    h2{font-size:20px;margin:0 0 12px;color:#c7d2fe}
-    p{margin:0 0 12px;color:var(--sub)}
-    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .btn{display:inline-flex;gap:8px;align-items:center;background:#111827;border:1px solid #29324d;color:#e5e7eb;border-radius:12px;padding:10px 14px;text-decoration:none}
-    .btn:hover{border-color:#3b4668}
-    .btn.primary{background:var(--brand);border-color:transparent}
-    .pill{font-size:12px;color:#fca5a5;background:#3f1b25;border:1px solid #5b2331;border-radius:999px;padding:6px 10px;display:inline-block;margin-bottom:10px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .footer{color:#93a0b8;font-size:13px;margin-top:24px}
-    .muted{color:#8aa0c5}
-    .code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:var(--muted);color:#cde1ff;border-radius:10px;padding:10px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #f7faff, #ffffff);
+      color: #222;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1E5AA8;
+      color: white;
+      padding: 30px 20px;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header span {
+      font-size: 0.6em;
+      display: block;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 60px 20px;
+    }
+
+    /* 🎬 Video Section */
+    section#demo-video {
+      background-color: #f2f6fc;
+      padding: 60px 20px;
+      margin-top: 60px;
+      border-top: 3px solid #1E5AA8;
+      box-shadow: 0 -5px 25px rgba(0,0,0,0.05);
+      animation: fadeIn 2s ease;
+    }
+
+    h2 {
+      color: #1E5AA8;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 80%;
+      max-width: 900px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    video:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #1E5AA8;
+      color: white;
+      padding: 25px 10px;
+      font-size: 0.95em;
+      margin-top: 60px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header { font-size: 1.6em; }
+      h2 { font-size: 1.5em; }
+      video { width: 95%; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="hero">
-      <div class="card">
-        <span class="pill">AI for Transparent Governance</span>
-        <h1>🏛️ AI Minister – Nepal</h1>
-        <p><b>Founder & Developer:</b> Narayan Ranabhat</p>
-        <p>A prototype that turns public budgets & projects into live dashboards, auto PDF transparency reports, and anomaly flags. Built in Nepal for Nepal.</p>
-        <div class="btns">
-          <a class="btn primary" href="http://localhost:8506" target="_blank">Open Live Dashboard</a>
-          <a class="btn" href="docs/AI_Minister_Grant_Proposal_Narayan_Ranabhat.pdf" target="_blank">English Proposal (PDF)</a>
-          <a class="btn" href="docs/AI_Minister_Grant_Proposal_Nepali_English_Narayan_Ranabhat.pdf" target="_blank">Bilingual Proposal (PDF)</a>
-          <a class="btn" href="docs/AI_Minister_Grant_Proposal_Nepali.pdf" target="_blank">नेपाली प्रस्ताव (PDF)</a>
-        </div>
-      </div>
-      <div class="card">
-        <h2>What’s inside</h2>
-        <p>• Interactive dashboard (Region / Sector / Year)</p>
-        <p>• Instant PDF transparency report</p>
-        <p>• CSV exports for budgets & projects</p>
-        <p>• “Ask AI” (optional) with secure API key</p>
-        <p class="muted">Roadmap: more datasets, Nepali LLM, public API.</p>
-      </div>
-    </div>
 
-    <div style="height:18px"></div>
+  <!-- 🏛️ Main Header -->
+  <header>
+    🏛️ AI Minister – Nepal
+    <span>Transparent Governance by AI</span>
+  </header>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Demo steps</h2>
-        <p class="code">streamlit run app.py</p>
-        <p>Open <b>http://localhost:8506</b>. Change Region/Sector. Download the report.</p>
-      </div>
-      <div class="card">
-        <h2>Deploy safely</h2>
-        <p>Use GitHub Pages for this site and Streamlit Cloud for the app. Keep your <b>OPENAI_API_KEY</b> in Streamlit <i>Secrets</i>—never in code.</p>
-      </div>
-      <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-        <p>Phone: +977-98XXXXXXXX</p>
-        <p>GitHub: <a href="https://github.com/youruser" target="_blank">github.com/youruser</a></p>
-      </div>
-    </div>
+  <!-- 🔧 Your existing dashboard or content area -->
+  <main>
+    <h2>Welcome to AI Minister Dashboard</h2>
+    <p>This page demonstrates the fusion of governance and artificial intelligence for Nepal.</p>
+    <p>Here you can later link your live dashboard or data panels.</p>
+  </main>
 
-    <p class="footer">© <span id="year"></span> Narayan Ranabhat • AI Minister – Nepal</p>
-  </div>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <!-- 🎬 New Demo Video Section -->
+  <section id="demo-video">
+    <h2>🎬 AI Minister – Nepal Demo</h2>
+    <video controls poster="assets/ai_minister_logo.png">
+      <source src="docs/AI_Minister_Demo1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p style="margin-top:15px; font-size:16px; color:#333;">
+      Founder & Developer: <b>Narayan Ranabhat</b>
+    </p>
+    <p style="font-size:14px; color:#555;">
+      ©२०२५ स्विट्जरल्यान्डमा विकसित, नेपालको माटोमा जन्मिएको परियोजना
+    </p>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    <p>Developed with ❤️ in Switzerland<br>
+    Rooted in the soil of Nepal</p>
+    <p>Contact: info@narayanmaster.com | © 2025 AI Minister Nepal</p>
+  </footer>
+
 </body>
 </html>
 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Minister – Nepal</title>
+  <style>
+    :root{
+      --bg:#0b0f19; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
+      --primary:#ef4444; --primary-600:#dc2626; --link:#93c5fd;
+      --radius:16px; --shadow:0 8px 28px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      display:flex;justify-content:center;min-height:100vh;padding:40px 16px;
+    }
+    .wrap{max-width:1080px;width:100%}
+    .card{
+      background:var(--card);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:28px;margin:20px 0;
+      border:1px solid rgba(255,255,255,.05)
+    }
+    .pill{display:inline-block;background:var(--primary);color:#fff;
+      font-weight:600;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+    h1,h2{margin:0 0 12px}
+    h1{font-size:2rem;font-weight:700;letter-spacing:.2px}
+    h2{font-size:1.35rem;margin-top:6px}
+    .lead{color:#cbd5e1;margin-bottom:12px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;
+      background:#1f2937;color:var(--text);margin:6px 8px 0 0;
+      transition:background .2s,transform .15s}
+    .btn:hover{background:#273244;transform:translateY(-1px)}
+    .btn.primary{background:var(--primary);color:#fff;font-weight:700}
+    .btn.primary:hover{background:var(--primary-600)}
+    ul{margin-left:1.2rem;margin-top:.4rem}
+    code{background:#1e293b;padding:3px 6px;border-radius:6px;color:#93c5fd}
+    .meta{color:var(--muted);font-size:.9rem}
+    footer{color:var(--muted);text-align:center;padding:24px 0 48px}
+    /* FLAG exactly equal to text height */
+    .titleRow{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+    .flag{
+      font-size:2rem;                /* same as h1 */
+      line-height:1;                 /* aligns with letter height */
+      filter:drop-shadow(0 0 8px rgba(239,68,68,0.65));
+      transform:translateY(2px);     /* optically centers with text baseline */
+    }
+    .status{margin-top:10px;font-size:.95rem}
+    .ok{color:#34d399}.bad{color:#f87171}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <span class="pill">AI for Transparent Governance</span>
+      <div class="titleRow">
+        <h1>🏛️ AI Minister – Nepal</h1>
+        <span class="flag" aria-hidden="true">🇳🇵</span>
+      </div>
+      <p class="lead"><strong>Founder & Developer:</strong> Narayan Ranabhat</p>
+      <p class="lead">A prototype that turns public budgets &amp; projects into live dashboards, auto PDF transparency reports, and anomaly flags. Built in Nepal for Nepal.</p>
+      <div>
+        <a id="openDash" href="http://localhost:8506" target="_blank" class="btn primary">Open Live Dashboard</a>
+        <a href="#" class="btn">English Proposal (PDF)</a>
+        <a href="#" class="btn">Bilingual Proposal (PDF)</a>
+        <a href="#" class="btn">नेपाली प्रस्ताव (PDF)</a>
+      </div>
+      <div id="dashStatus" class="status meta">Checking dashboard status…</div>
+    </div>
+
+    <div class="card">
+      <h2>What's inside</h2>
+      <ul>
+        <li>Interactive dashboard (Region / Sector / Year)</li>
+        <li>Instant PDF transparency report</li>
+        <li>CSV exports for budgets &amp; projects</li>
+        <li>“Ask AI” (optional) with secure API key</li>
+      </ul>
+      <p><strong>Roadmap:</strong> more datasets, Nepali LLM, public API.</p>
+    </div>
+
+    <div class="card">
+      <h2>Demo steps</h2>
+      <p><code>python -m streamlit run app.py --server.port 8506</code></p>
+      <p>Then open <code>http://localhost:8506</code>. Change Region/Sector. Download the report.</p>
+    </div>
+
+    <div class="card">
+      <h2>Deploy safely</h2>
+      <p>Use GitHub Pages for this site and Streamlit Cloud for the app. Keep your <code>OPENAI_API_KEY</code> in Streamlit Secrets — never in code.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:narayanranabhat777@gmail.com" style="color:var(--link)">narayanranabhat777@gmail.com</a><br>
+      Phone: <a href="tel:+41767792741" style="color:var(--link)">+41 767792741</a><br>
+      GitHub: <a href="https://github.com/narayan88-ctrl" target="_blank" style="color:var(--link)">github.com/narayan88-ctrl</a></p>
+      <p class="meta">© 2025 Narayan Ranabhat • AI Minister – Nepal</p>
+    </div>
+
+    <footer>Made with ❤️ for transparency and Nepal.</footer>
+  </div>
+
+  <script>
+    // check if Streamlit dashboard is alive
+    (async()=>{
+      const url="http://localhost:8506/";
+      const s=document.getElementById("dashStatus");
+      try{
+        await fetch(url,{mode:"no-cors"});
+        s.textContent="✅ Dashboard is running on localhost:8506";
+        s.className="status ok";
+      }catch(e){
+        s.innerHTML="⚠️ Dashboard not detected. Start it with <code>python -m streamlit run app.py --server.port 8506</code>";
+        s.className="status bad";
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
+
