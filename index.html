@@ -50,12 +50,20 @@
       margin-bottom: 20px;
     }
 
+    .video-frame {
+      display: inline-block;
+      background: white;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
     video {
       width: 80%;
       max-width: 900px;
       border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.25);
-      transition: transform 0.3s ease;
+      outline: none;
     }
 
     video:hover {
@@ -91,20 +99,22 @@
     <span>Transparent Governance by AI</span>
   </header>
 
-  <!-- 🔧 Your existing dashboard or content area -->
+  <!-- 🔧 Your main content -->
   <main>
-    <h2>Welcome to AI Minister Dashboard</h2>
-    <p>This page demonstrates the fusion of governance and artificial intelligence for Nepal.</p>
-    <p>Here you can later link your live dashboard or data panels.</p>
+    <h2>Welcome to the AI Minister Dashboard</h2>
+    <p>This project merges governance transparency with artificial intelligence to empower Nepal’s digital future.</p>
+    <p>Developed in Switzerland, rooted in the soil of Nepal.</p>
   </main>
 
-  <!-- 🎬 New Demo Video Section -->
+  <!-- 🎬 Demo Video Section -->
   <section id="demo-video">
     <h2>🎬 AI Minister – Nepal Demo</h2>
-    <video controls poster="assets/ai_minister_logo.png">
-      <source src="docs/AI_Minister_Demo1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="video-frame">
+      <video controls poster="assets/ai_minister_logo.png">
+        <source src="https://drive.google.com/uc?export=download&id=1LyAEzUPor-ofA5wWLx0iVZdcU58VahdK" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <p style="margin-top:15px; font-size:16px; color:#333;">
       Founder & Developer: <b>Narayan Ranabhat</b>
     </p>
